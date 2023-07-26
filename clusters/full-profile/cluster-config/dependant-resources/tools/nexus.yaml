@@ -36,7 +36,7 @@ spec:
     spec:
       initContainers:
       - name: volume-mount-hack
-        image: projects.registry.vmware.com/tanzu_meta_pocs/tools/busybox:latest
+        image: busybox:latest
         command:
         - sh
         - -c
@@ -46,7 +46,7 @@ spec:
           mountPath: /nexus-data
       containers:
       - name: nexus
-        image: projects.registry.vmware.com/tanzu_meta_pocs/tools/nexus3:latest
+        image: sonatype/nexus3:latest
         ports:
         - containerPort: 8081
           name: default

@@ -249,7 +249,7 @@ spec:
       containers:
         - name: sidecar-injector
           
-          image: projects.registry.vmware.com/tanzu_meta_pocs/tools/vault-k8s:1.2.1
+          image: hashicorp/vault-k8s:1.2.1
           imagePullPolicy: "IfNotPresent"
           securityContext:
             allowPrivilegeEscalation: false
@@ -388,7 +388,7 @@ spec:
       containers:
         - name: vault
           
-          image: projects.registry.vmware.com/tanzu_meta_pocs/tools/vault:1.13.1
+          image: hashicorp/vault:1.13.1
           imagePullPolicy: IfNotPresent
           command:
           - "/bin/sh"

@@ -40,14 +40,14 @@ spec:
     spec: # we must add init container to solving permiision denied messages fo log files
       initContainers:
       - name: volume-mount-hack
-        image: projects.registry.vmware.com/tanzu_meta_pocs/tools/busybox:latest
+        image: busybox:latest
         command: ["sh", "-c", "chown -R 200:200 /nexus-data"]
         volumeMounts:
         - name: nexus
           mountPath: /nexus-data
       containers:
       - name: nexus
-        image: projects.registry.vmware.com/tanzu_meta_pocs/tools/nexus3:latest
+        image: sonatype/nexus3:latest
         ports:
           - containerPort: 8081
             name: default

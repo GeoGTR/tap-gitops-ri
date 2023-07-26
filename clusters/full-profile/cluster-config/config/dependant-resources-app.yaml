@@ -10,7 +10,7 @@ spec:
   fetch:
     - git:
         ref: origin/main
-        url: https://github.com/gorkemozlu/tap-gitops-3
+        url: https://github.com/GeoGTR/tap-gitops.git
         subPath: clusters/full-profile/cluster-config/dependant-resources/tools
   template:
     - ytt: {}

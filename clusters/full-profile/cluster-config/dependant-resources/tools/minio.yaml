@@ -39,7 +39,7 @@ spec:
           claimName: minio-pv-claim
       containers:
       - name: minio
-        image: projects.registry.vmware.com/tanzu_meta_pocs/tools/minio:latest
+        image: minio/minio:latest
         command:
         - /bin/bash
         - -c
